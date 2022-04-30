@@ -1,3 +1,19 @@
-* {
+header {
     font-family: 'Press Start 2P', cursive;
+    background-color: #475B63;
+    color: #fff;
+    display: flex;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li{
+    display: inline;
+    justify-content: flex-end;
+}
+
+a {
+    text-decoration: none;
 }
