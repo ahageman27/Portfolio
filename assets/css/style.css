@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
     font-size: 62.5%;
-    max-width: 100%;
 }
 
 body {
@@ -85,6 +84,11 @@ main div p {
     margin: 1rem;
 }
 
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
 #projects h2 {
     font-size: 2.5rem;
     border-bottom: .3rem solid #B22727;
@@ -95,9 +99,8 @@ main div p {
 
 #refactor {
     position: relative;
-    flex: 1 0 auto;
-    max-width: 40%;
     margin: 1rem;
+    width: 60%;
 }
 
 #refactor h3 {
@@ -110,9 +113,15 @@ main div p {
     width: 100%;
 }
 
+.vert {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: stretch;
+}
+
 #map {
     position: relative;
-    flex: 1 0 auto;
     margin: 1rem;
 }
 
@@ -126,10 +135,8 @@ main div p {
     width: 100%;
 }
 
-
 #snake {
     position: relative;
-    flex: 1 0 auto;
     margin: 1rem;
 }
 
@@ -141,15 +148,4 @@ main div p {
 
 #snake img {
     width: 100%;
-}
-
-.container {
-    display: flex;
-    justify-content: space-around;
-}
-
-.vert {
-    display: flex;
-    flex-direction: column;
-    align-content: stretch;
 }
