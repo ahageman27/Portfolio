@@ -35,7 +35,7 @@ nav {
     display: flex;
     font-size: 1.5rem;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-end;
 
 }
 
@@ -63,21 +63,93 @@ a:visited {
 .selfie {
     max-width: 30%;
     margin: 1rem;
+    align-self: flex-start;
 }
 
 main {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
+    justify-content: space-between;
 }
 
-#descr {
+#descr h2 {
     font-size: 2.5rem;
+    font-weight: bold;
+    margin: 1rem;
+    border-bottom: .3rem solid #B22727;
+    padding-bottom: .3rem;
+
+}
+
+main div p {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    border-bottom: .3rem solid #B22727;
+    padding-bottom: .3rem;
     font-weight: bold;
     margin: 1rem;
 }
 
-main p {
-    font-size: 2rem;
+#refactor {
+    position: relative;
+    flex: 1 0 auto;
+    max-width: 40%;
     margin: 1rem;
+}
+
+#refactor h3 {
+    position: absolute;
+    bottom: .8rem;
+    right: 1.6rem;
+}
+
+#refactor img {
+    width: 100%;
+}
+
+#map {
+    position: relative;
+    flex: 1 0 auto;
+    margin: 1rem;
+}
+
+#map h3 {
+    position: absolute;
+    bottom: .8rem;
+    right: 1.6rem;
+}
+
+#map img {
+    width: 100%;
+}
+
+
+#snake {
+    position: relative;
+    flex: 1 0 auto;
+    margin: 1rem;
+}
+
+#snake h3 {
+    position: absolute;
+    bottom: .8rem;
+    right: 1.6rem;
+}
+
+#snake img {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.vert {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
 }
