@@ -85,7 +85,7 @@ main {
 }
 
 main div p {
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin: 1rem;
 }
 
@@ -182,10 +182,25 @@ footer a {
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 600px) {
     header h1 {
         font-size: 2rem;
     }
 
+    main {
+        flex-direction: column;
+    }
 
+    .selfie {
+        max-width: 94%;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vert {
+        justify-items: stretch;
+    }
 }
