@@ -1,6 +1,9 @@
-* {
+:root {
     box-sizing: border-box;
     font-size: 62.5%;
+    --backgroundColor: #F8CB2E;
+    --mainColor: #006E7F;
+    --accentColor: #B22727;
 }
 
 body {
@@ -9,21 +12,16 @@ body {
 
 header {
     font-family: 'Press Start 2P', cursive;
-    background-color: #F8CB2E;
     display: flex;
     justify-content: space-between;
     width: 100%;
+    background-color: var(--backgroundColor);
 }
 
 header h1 {
     padding: .5rem;
     font-size: 4rem;
-    color: #B22727;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
+    color: var(--mainColor);
 }
 
 .dropdown {
@@ -38,7 +36,7 @@ nav {
 }
 
 .menu li {
-    color: #B22727;
+    color: var(--mainColor);
     margin: 1rem
 }
 
@@ -51,17 +49,17 @@ nav {
 .menu-icon div {
     width: 2.4rem;
     height: .25rem;
-    background-color: #B22727;
+    background-color: var(--mainColor);
     margin: .5rem 0;
 }
 
 a {
     text-decoration: none;
-    color: #B22727;
+    color: var(--mainColor);
 }
 
 a:visited {
-    color: #B22727;
+    color: var(--mainColor);
 }
 
 .selfie {
@@ -77,15 +75,16 @@ main {
 
 #descr h2 {
     font-size: 2.5rem;
-    font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
     margin: 1rem;
-    border-bottom: .3rem solid #B22727;
+    border-bottom: .3rem solid var(--accentColor);
     padding-bottom: .3rem;
+    color: var(--accentColor);
 
 }
 
 main div p {
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin: 1rem;
 }
 
@@ -95,12 +94,17 @@ main div p {
     grid-template-rows: 1fr, 1fr;
 }
 
-#projects h2 {
+#project-section h2 {
     font-size: 2.5rem;
-    border-bottom: .3rem solid #B22727;
+    font-family: 'Press Start 2P', cursive;
+    border-bottom: .3rem solid var(--accentColor);
     padding-bottom: .3rem;
-    font-weight: bold;
     margin: 1rem;
+    color: var(--mainColor);
+}
+
+.project {
+    opacity: 50%;
 }
 
 #refactor {
@@ -113,10 +117,13 @@ main div p {
 
 #refactor h3 {
     position: absolute;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     font-family: 'Press Start 2P', cursive;
     bottom: .8rem;
-    right: .8rem;
+    left: .8rem;
+    color: var(--accentColor);
+    background-color: var(--backgroundColor);
+    padding: 1rem;
 }
 
 #refactor img {
@@ -131,10 +138,13 @@ main div p {
 
 #map h3 {
     position: absolute;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     font-family: 'Press Start 2P', cursive;
     bottom: .8rem;
-    right: .8rem;
+    left: .8rem;
+    color: var(--accentColor);
+    background-color: var(--backgroundColor);
+    padding: 1rem;
 }
 
 #map img {
@@ -149,10 +159,13 @@ main div p {
 
 #snake h3 {
     position: absolute;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     font-family: 'Press Start 2P', cursive;
     bottom: .8rem;
-    right: .8rem;
+    left: .8rem;
+    color: var(--accentColor);
+    background-color: var(--backgroundColor);
+    padding: 1rem;
 }
 
 #snake img {
@@ -160,9 +173,13 @@ main div p {
     height: 100%;
 }
 
+.project:hover {
+    opacity: 100%;
+}
+
 footer {
     font-family: 'Press Start 2P', cursive;
-    background-color: #F8CB2E;
+    background-color: var(--backgroundColor);
     display: flex;
     justify-content: flex-start;
     padding: .5rem;
@@ -170,11 +187,17 @@ footer {
 
 footer a {
     margin: 1rem;
+    font-size: 1.5rem;
 }
 
 @media screen and (max-width: 1079px) {
+    .dropdown {
+        position: relative;
+    }
+
     .menu {
         display: none;
+
     }
 
     .menu-icon {
@@ -184,12 +207,16 @@ footer a {
     .dropdown:hover .menu {
         display: flex;
         flex-direction: column;
+        position: absolute;
+        top: 4rem;
+        right: .2rem;
+        background-color: var(--backgroundColor);
     }
 }
 
 @media screen and (max-width: 600px) {
     header h1 {
-        font-size: 2rem;
+        font-size: 4rem;
     }
 
     main {
@@ -197,11 +224,14 @@ footer a {
     }
 
     .selfie {
-        width: 100%;
+        width: 94%;
     }
 
     .container {
-        grid-template-columns: auto;
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+    }
+
+    #refactor {
+        grid-column: 1 / 2;
     }
 }
