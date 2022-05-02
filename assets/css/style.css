@@ -65,7 +65,7 @@ a:visited {
 }
 
 .selfie {
-    max-width: 30%;
+    width: 30%;
     margin: 1rem;
     align-self: flex-start;
 }
@@ -90,8 +90,9 @@ main div p {
 }
 
 .container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr, 1fr;
 }
 
 #projects h2 {
@@ -105,24 +106,22 @@ main div p {
 #refactor {
     position: relative;
     margin: 1rem;
-    width: 60%;
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+
 }
 
 #refactor h3 {
     position: absolute;
+    font-size: 1.4rem;
+    font-family: 'Press Start 2P', cursive;
     bottom: .8rem;
-    right: 1.6rem;
+    right: .8rem;
 }
 
 #refactor img {
     width: 100%;
-}
-
-.vert {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-    justify-content: stretch;
+    height: 100%;
 }
 
 #map {
@@ -132,12 +131,15 @@ main div p {
 
 #map h3 {
     position: absolute;
+    font-size: 1.4rem;
+    font-family: 'Press Start 2P', cursive;
     bottom: .8rem;
-    right: 1.6rem;
+    right: .8rem;
 }
 
 #map img {
     width: 100%;
+    height: 100%;
 }
 
 #snake {
@@ -147,12 +149,15 @@ main div p {
 
 #snake h3 {
     position: absolute;
+    font-size: 1.4rem;
+    font-family: 'Press Start 2P', cursive;
     bottom: .8rem;
-    right: 1.6rem;
+    right: .8rem;
 }
 
 #snake img {
     width: 100%;
+    height: 100%;
 }
 
 footer {
@@ -192,15 +197,11 @@ footer a {
     }
 
     .selfie {
-        max-width: 94%;
+        width: 100%;
     }
 
     .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .vert {
-        justify-items: stretch;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3, 1fr);
     }
 }
