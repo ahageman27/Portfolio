@@ -5,18 +5,14 @@
 
 body {
     background-color: #EBD8C3;
-    display: flex;
-    align-items: stretch;
-    flex-direction: column;
 }
 
 header {
     font-family: 'Press Start 2P', cursive;
     background-color: #F8CB2E;
-    color: #000;
     display: flex;
     justify-content: space-between;
-
+    width: 100%;
 }
 
 header h1 {
@@ -30,17 +26,26 @@ nav {
     justify-content: space-between;
 }
 
+.dropdown {
+    display: flex;
+    align-items: flex-end;
+}
+
 .menu {
     display: flex;
     font-size: 1.5rem;
-    justify-content: space-evenly;
-    align-items: flex-end;
-
+    justify-content: space-between;
 }
 
 .menu li {
     color: #B22727;
-    margin: .8rem
+    margin: 1rem
+}
+
+.menu-icon {
+    margin: 1rem;
+    align-self: center;
+    display: none;
 }
 
 .menu-icon div {
@@ -48,11 +53,11 @@ nav {
     height: .25rem;
     background-color: #B22727;
     margin: .5rem 0;
-    display: none;
 }
 
 a {
     text-decoration: none;
+    color: #B22727;
 }
 
 a:visited {
@@ -148,4 +153,39 @@ main div p {
 
 #snake img {
     width: 100%;
+}
+
+footer {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #F8CB2E;
+    display: flex;
+    justify-content: flex-start;
+    padding: .5rem;
+}
+
+footer a {
+    margin: 1rem;
+}
+
+@media screen and (max-width: 1079px) {
+    .menu {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .dropdown:hover .menu {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+
 }
