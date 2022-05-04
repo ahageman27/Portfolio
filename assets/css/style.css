@@ -105,6 +105,7 @@ main div p {
 
 .project {
     opacity: 50%;
+    box-shadow: 0 0 .7rem;
 }
 
 #refactor {
@@ -190,7 +191,7 @@ footer a {
     font-size: 1.5rem;
 }
 
-@media screen and (max-width: 1079px) {
+@media screen and (max-width: 768px) {
     .dropdown {
         position: relative;
     }
@@ -214,7 +215,7 @@ footer a {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 567px) {
     header h1 {
         font-size: 4rem;
     }
