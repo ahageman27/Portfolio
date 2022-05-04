@@ -19,7 +19,7 @@ header {
 }
 
 header h1 {
-    padding: .5rem;
+    margin: 2rem;
     font-size: 4rem;
     color: var(--mainColor);
 }
@@ -62,15 +62,15 @@ a:visited {
     color: var(--mainColor);
 }
 
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
 .selfie {
     width: 30%;
     margin: 1rem;
     align-self: flex-start;
-}
-
-main {
-    display: flex;
-    justify-content: space-between;
 }
 
 #descr h2 {
