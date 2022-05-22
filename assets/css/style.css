@@ -108,7 +108,7 @@ main div p {
     box-shadow: 0 0 .7rem;
 }
 
-#refactor {
+#drinks {
     position: relative;
     margin: 1rem;
     grid-column: 1 / 3;
@@ -116,7 +116,7 @@ main div p {
 
 }
 
-#refactor h3 {
+#drinks h3 {
     position: absolute;
     font-size: 1.8rem;
     font-family: 'Press Start 2P', cursive;
@@ -127,7 +127,7 @@ main div p {
     padding: 1rem;
 }
 
-#refactor img {
+#drinks img {
     width: 100%;
     height: 100%;
 }
@@ -232,7 +232,7 @@ footer a {
         grid-template-columns: 1fr;
     }
 
-    #refactor {
+    #drinks {
         grid-column: 1 / 2;
     }
 }
